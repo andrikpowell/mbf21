@@ -202,6 +202,7 @@ MBF21 defaults:
 
 #### New DEHACKED "Weapon recoil" Weapon field
 - Add `Weapon recoil = X` in the Weapon definition.
+- Value must be an integer. If value is negative, recoil is reversed pushing the player forward.
 - Tools should assume this value is undefined for all vanilla weapons (i.e. always write it to the patch if the user specifies any valid value)
 - Weapons WITH this field set will use the weapon-recoil value when:
   - OPTIONS `weapon_recoil` is set to `1`
