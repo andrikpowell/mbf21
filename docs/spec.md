@@ -205,7 +205,6 @@ MBF21 defaults:
 - Value must be an integer. If value is negative, recoil is reversed pushing the player forward.
 - Tools should assume this value is undefined for all vanilla weapons (i.e. always write it to the patch if the user specifies any valid value)
 - Weapons WITH this field set will use the weapon-recoil value when:
-  - OPTIONS `weapon_recoil` is set to `1`
   - The following codepointers are called:
     - `A_FirePistol`
     - `A_FireShotgun`
@@ -214,7 +213,7 @@ MBF21 defaults:
     - `A_FirePlasma`
     - `A_GunFlash`
     - `A_GunFlashTo` (new to MBF21)
-- Weapons WITHOUT this field set will use MBF default values set per weapon:
+- Weapons WITHOUT this field set and have OPTIONS `weapon_recoil` set to `1` will use MBF default values set per weapon:
     - 10    `wp_fist`
     - 10    `wp_pistol`
     - 30    `wp_shotgun`
